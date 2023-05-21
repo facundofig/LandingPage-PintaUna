@@ -1,0 +1,389 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--fuenteTexto);
+}
+
+/********* VARIABLES *********/
+
+:root {
+    --transicion: all 0.4s;
+    --fuenteTitulos: 'Bebas Neue', cursive;
+    --fuenteTexto: 'Roboto', sans-serif;
+}
+
+/********* ENCABEZADO *********/
+
+header {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(2, 600px);
+
+    background-color: black;
+}
+
+header figure {
+    grid-column: 1/2;
+    margin: 10px 0;
+}
+
+header figure img {
+    width: 150px;
+}
+
+header nav {
+    grid-column: 2/3;
+}
+
+header nav ul {
+    display: grid;
+    grid-template-columns: repeat(3, 200px);
+    height: 100%;
+    align-content: center;
+
+    list-style-type: none;
+}
+
+header nav ul li {
+    text-align: right;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: #EEEEEE;
+    letter-spacing: 3px;
+
+    border-bottom: 2px solid transparent;
+
+    transition: var(--transicion);
+}
+
+header nav ul li a:hover {
+    border-bottom: 2px solid #E2703A;
+}
+
+/********* TÍTULO PRINCIPAL *********/
+
+main section:nth-of-type(1) {
+    text-align: center;
+
+    background-image: url(img/fondo.png);
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+main section:nth-of-type(1) h1 {
+    font-family: var(--fuenteTitulos);
+    color: #EEEEEE;
+    letter-spacing: 5px;
+    font-size: 40px;
+
+    padding-top: 150px;
+}
+
+main section:nth-of-type(1) p {
+    color: #EEEEEE;
+    margin-top: 30px;
+    letter-spacing: 3px;
+    font-weight: 600;
+}
+
+main section:nth-of-type(1) a {
+    display: inline-block;
+    margin: 70px 0;
+
+    text-decoration: none;
+    color: black;
+    letter-spacing: 2px;
+    font-weight: 600;
+
+    background-color: #EEEEEE;
+    padding: 15px 40px;
+    border-radius: 15px;
+
+    transition: var(--transicion);
+}
+
+main section:nth-of-type(1) a:hover {
+    background-color: #E2703A;
+    border-radius: 30px;
+}
+
+/********* CATEGORÍAS *********/
+
+main {
+    background-color: #EEEEEE;
+}
+
+main section:nth-of-type(2) ul {
+    display: grid;
+    grid-template-columns: repeat(8, 141px);
+    justify-content: center;
+    gap: 0 10px;
+
+    margin: 30px 0;
+}
+
+main section:nth-of-type(2) ul li {
+    text-align: center;
+    margin-top: 30px;
+}
+
+main section:nth-of-type(2) ul li figure {
+    display: inline-block;
+    background-color: #E2703A;
+    margin-bottom: 15px;
+    border-radius: 50%;
+    padding: 20px;
+    border: 2px solid transparent;
+    
+    transition: var(--transicion);
+}
+
+main section:nth-of-type(2) ul li figure:hover {
+    background-color: #EEEEEE;
+    border: 2px solid #E2703A;
+}
+
+main section:nth-of-type(2) ul li figure img {
+    width: 90px;
+}
+
+main section:nth-of-type(2) ul li p {
+    font-weight: 600;
+    letter-spacing: 2px;
+}
+
+main section:nth-of-type(2) ul {
+    list-style-type: none;
+}
+
+/*********  MENÚ *********/
+
+#menu {
+    display: grid;
+    grid-template-rows: 50px 350px;
+    grid-template-columns: repeat(4, 262.5px);
+    justify-content: center;
+    gap: 10px 50px;
+
+    margin-top: 50px;
+}
+
+#menu h1, #fotos h1, #contacto h1 {
+    grid-column: 1/5;
+    grid-row: 1/2;
+
+    font-family: var(--fuenteTitulos);
+    letter-spacing: 5px;
+    font-size: 30px;
+}
+
+#menu article {
+    text-align: center;
+}
+
+#menu article h2 {
+    font-family: var(--fuenteTitulos);
+    font-size: 23px;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+
+#menu article figure {
+    height: 60%;
+    margin-bottom: 20px;
+}
+
+#menu article figure img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#menu article ul {
+    list-style-type: none;
+    list-style-position: inside;
+    list-style-image: url(img/estrella.png);
+    text-align: left;
+    margin-top: 20px;
+}
+
+#menu article ul li {
+    margin-bottom: 15px;
+    font-size: 20px;
+}
+
+#menu article ul li:hover {
+    font-weight: 900;
+}
+
+#menu article:nth-of-type(1) {
+    grid-column: 1/2;
+    grid-row: 2/3;
+}
+
+#menu article:nth-of-type(2) {
+    grid-column: 2/3;
+    grid-row: 2/3;
+}
+
+#menu article:nth-of-type(3) {
+    grid-column: 3/4;
+    grid-row: 2/3;
+}
+
+#menu article:nth-of-type(4) {
+    grid-column: 4/5;
+    grid-row: 2/3;
+}
+
+/*********  FOTOS *********/
+
+#fotos {
+    display: grid;
+    grid-template-rows: 50px repeat(2, 200px);
+    grid-template-columns: repeat(3, 366.6px);
+    gap: 30px 50px;
+    justify-content: center;
+
+    margin-top: 50px;
+}
+
+#fotos h1 {
+    grid-column: 1/4;
+    grid-row: 1/2;
+}
+
+#fotos img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#fotos img:nth-of-type(1) {
+    grid-column: 1/2;
+    grid-row: 2/4;
+}
+
+#fotos img:nth-of-type(2) {
+    grid-column: 2/3;
+    grid-row: 2/3;
+}
+
+#fotos img:nth-of-type(3) {
+    grid-column: 2/3;
+    grid-row: 3/4;
+}
+
+#fotos img:nth-of-type(4) {
+    grid-column: 3/4;
+    grid-row: 2/4;
+}
+
+/*********  CONTACTO *********/
+
+#contacto {
+    display: grid;
+    grid-template-columns: 250px repeat(2, 435px);
+    justify-content: center;
+    gap: 0 40px;
+
+    margin-top: 50px;
+    background-color: black;
+    padding: 20px 0;
+}
+
+#contacto h1 {
+    grid-column: 1/2;
+
+    color: #EEEEEE;
+    letter-spacing: 8px;
+}
+
+#contacto form {
+    grid-column: 2/3;
+    height: 242.47px;
+
+    display: grid;
+    grid-template-rows: repeat(3, 37.078px) 74.157px 37.078px;
+    gap: 5px 0;
+}
+
+#contacto form input, #contacto form textarea, #contacto form select {
+    background-color: transparent;
+    border: 1px solid #EEEEEE;
+    padding: 5px;
+
+    color:#EEEEEE;
+    transition: var(--transicion);
+}
+
+#contacto form ::placeholder {
+    font-family: var(--fuenteTexto);
+}
+#contacto form select option {
+    color:black;
+}
+
+#contacto form textarea {
+    resize: none;
+    font-family: var(--fuenteTexto);
+}
+
+#contacto form input[type="submit"] {
+    display: inline-block;
+    width: 80px;
+
+    justify-self: end;
+    background-color: #EEEEEE;
+    color:black;
+
+    transition: var(--transicion);
+}
+
+#contacto form input[type="submit"]:hover {
+    background-color: #E2703A;
+    border: none;
+    border-radius: 10px;
+}
+
+#contacto form input:focus, #contacto form textarea:focus, #contacto form select:focus {
+    background-color: #EEEEEE;
+    color: black;
+}
+
+#contacto figure img {
+    grid-column: 3/4;
+
+    width: 100%;
+    height: 100%;
+}
+
+/*********  PIE DE PÁGINA *********/
+
+footer {
+    text-align: center;
+    margin-top: 30px;
+}
+
+footer p {
+    font-size: 18px;
+}
+
+footer ul li a img {
+    width: 32px;
+    margin: 10px 0;
+}
+
+footer ul li {
+    display: inline-block;
+}
